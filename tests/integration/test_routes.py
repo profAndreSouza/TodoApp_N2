@@ -59,7 +59,7 @@ def test_api_criar_tarefa_com_titulo_ausente_ou_em_branco_deve_retornar_400(clie
         assert "error" in response.get_json()
 
     response = client.get("/api/todos")
-    assert response.status_code == 204
+    assert response.status_code == 200
     assert response.get_json() == []
 
 def test_api_obter_tarefa_por_id_existente(client):
